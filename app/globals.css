@@ -1,0 +1,54 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #0a0f1a;
+  --bg-secondary: #111827;
+  --bg-card: #1a2332;
+  --text-primary: #f8fafc;
+  --text-muted: #94a3b8;
+  --accent: #0ea5e9;
+  --accent-gold: #d4af37;
+  --border: rgba(148, 163, 184, 0.12);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-geist-sans), system-ui, sans-serif;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+  .gradient-text {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-sky-400 via-blue-500 to-cyan-400;
+  }
+  .gradient-gold {
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-yellow-500 to-amber-600;
+  }
+}
+
+/* Subtle grid background */
+.bg-grid {
+  background-image: 
+    linear-gradient(rgba(14, 165, 233, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(14, 165, 233, 0.03) 1px, transparent 1px);
+  background-size: 48px 48px;
+}
+
+.glow-ring {
+  box-shadow: 0 0 40px -10px rgba(14, 165, 233, 0.4);
+}
+
+.glow-gold {
+  box-shadow: 0 0 30px -5px rgba(212, 175, 55, 0.3);
+}
