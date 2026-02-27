@@ -39,6 +39,23 @@ npm start
 - **Contact form**: Uses Resend. Set `RESEND_API_KEY` and `CONTACT_EMAIL_TO` in `.env` (see `.env.example`). Optionally set `RESEND_FROM_EMAIL` once your domain is verified in Resend.
 - **Favicon**: Replace `public/favicon.png` with your own logo if desired.
 
+## GitHub
+
+This project has its own git repo. To push to GitHub:
+
+1. **Create a new repository** on [GitHub](https://github.com/new):
+   - Name it e.g. `techshekhada-website` (or `techshekhada.com`)
+   - Do **not** initialize with a README (this project already has one)
+
+2. **Add the remote and push** (replace `YOUR_USERNAME` and `REPO_NAME` with your GitHub username and repo name):
+
+```bash
+cd techshekhada-website
+git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
+git branch -M main
+git push -u origin main
+```
+
 ## Deploy
 
-Deploy to Vercel, Netlify, or any Node host. Set the root directory to `techshekhada-website` and build command to `npm run build`.
+Deploy to Vercel, Netlify, or any Node host. Set the root directory to `techshekhada-website` and build command to `npm run build`. Add `RESEND_API_KEY` and `CONTACT_EMAIL_TO` in the host's environment variables.
