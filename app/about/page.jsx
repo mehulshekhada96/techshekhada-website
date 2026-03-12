@@ -1,3 +1,17 @@
+import { SITE, absoluteUrl } from '@/lib/site';
+
+export const metadata = {
+  title: 'About Us',
+  description: 'Tech Shekhada is a technology company focused on building products and solutions that help businesses and creators grow. Thinking Tech Solutions? Think Tech Shekhada.',
+  openGraph: {
+    title: 'About Tech Shekhada',
+    description: 'We build tech solutions that scale—with clarity, quality, and delivery you can count on.',
+    url: `${SITE.baseUrl}/about`,
+    images: [{ url: absoluteUrl(SITE.ogImagePath), width: 1200, height: 630, alt: SITE.name }],
+  },
+  alternates: { canonical: `${SITE.baseUrl}/about` },
+};
+
 export default function AboutPage() {
   return (
     <div className="relative">

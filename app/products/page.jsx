@@ -1,6 +1,19 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { products } from '@/lib/products';
+import { SITE, absoluteUrl } from '@/lib/site';
+
+export const metadata = {
+  title: 'Our Products',
+  description: 'Software and tools built by Tech Shekhada to help you grow and operate smarter. InstaGenius AI and more.',
+  openGraph: {
+    title: 'Products | Tech Shekhada',
+    description: 'Software and tools built by Tech Shekhada. InstaGenius AI and more.',
+    url: `${SITE.baseUrl}/products`,
+    images: [{ url: absoluteUrl(SITE.ogImagePath), width: 1200, height: 630, alt: SITE.name }],
+  },
+  alternates: { canonical: `${SITE.baseUrl}/products` },
+};
 
 export default function ProductsPage() {
   return (
@@ -66,7 +79,7 @@ export default function ProductsPage() {
                     <div className="flex-shrink-0 lg:w-64">
                       <div className="aspect-square rounded-xl bg-[var(--bg-card)] flex items-center justify-center border border-[var(--border)] p-4">
                         <Image
-                          src="/instagenius-logo.svg"
+                          src={product.logoPath || '/instagenius-logo.svg'}
                           alt={product.name}
                           width={140}
                           height={140}

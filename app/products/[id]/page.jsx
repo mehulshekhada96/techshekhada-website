@@ -1,6 +1,26 @@
 import Link from 'next/link';
+import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { products } from '@/lib/products';
+import { SITE, absoluteUrl } from '@/lib/site';
+
+export async function generateMetadata({ params }) {
+  const { id } = await params;
+  const product = products.find((p) => p.id === id);
+  if (!product) return { title: 'Product Not Found' };
+  const url = `${SITE.baseUrl}/products/${id}`;
+  return {
+    title: product.name,
+    description: product.tagline,
+    openGraph: {
+      title: `${product.name} | Tech Shekhada`,
+      description: product.description,
+      url,
+      images: [{ url: absoluteUrl(SITE.ogImagePath), width: 1200, height: 630, alt: product.name }],
+    },
+    alternates: { canonical: url },
+  };
+}
 
 export default async function ProductDetailPage({ params }) {
   const { id } = await params;
@@ -8,9 +28,26 @@ export default async function ProductDetailPage({ params }) {
 
   if (!product) notFound();
 
+  const productUrl = `${SITE.baseUrl}/products/${product.id}`;
+  const productJsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'SoftwareApplication',
+    name: product.name,
+    description: product.description,
+    url: productUrl,
+    applicationCategory: 'BusinessApplication',
+    offers: { '@type': 'Offer', url: product.href },
+    featureList: product.features,
+  };
+
   return (
     <div className="relative">
-      <section className="border-b border-[var(--border)] bg-grid py-12 sm:py-16">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}
+      />
+      <article itemScope itemType="https://schema.org/SoftwareApplication">
+        <section className="border-b border-[var(--border)] bg-grid py-12 sm:py-16" aria-label="Product header">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <Link
             href="/products"
@@ -25,16 +62,28 @@ export default async function ProductDetailPage({ params }) {
               </span>
             )}
           </div>
-          <h1 className="mt-4 font-display text-3xl font-bold text-white sm:text-4xl md:text-5xl">
-            {product.name}
-          </h1>
+          {(product.fullLogoPathDark ?? product.fullLogoPath) ? (
+            <div className="mt-4">
+              <Image
+                src={product.fullLogoPathDark ?? product.fullLogoPath}
+                alt={product.name}
+                width={320}
+                height={96}
+                className="h-12 w-auto sm:h-14"
+              />
+            </div>
+          ) : (
+            <h1 className="mt-4 font-display text-3xl font-bold text-white sm:text-4xl md:text-5xl">
+              {product.name}
+            </h1>
+          )}
           <p className="mt-4 max-w-2xl text-slate-400 text-lg">
             {product.tagline}
           </p>
         </div>
       </section>
 
-      <section className="py-16 sm:py-20">
+        <section className="py-16 sm:py-20" aria-label="Product details">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <div className="prose prose-invert max-w-none">
             <p className="text-slate-300 leading-relaxed">
@@ -59,7 +108,7 @@ export default async function ProductDetailPage({ params }) {
               Ready to try {product.name}?
             </h3>
             <p className="mt-2 text-slate-400">
-              Sign up and start creating with AI in minutes.
+              {product.ctaSubtitle ?? 'Sign up and start creating with AI in minutes.'}
             </p>
             <a
               href={product.href}
@@ -75,6 +124,7 @@ export default async function ProductDetailPage({ params }) {
           </div>
         </div>
       </section>
+      </article>
     </div>
   );
 }

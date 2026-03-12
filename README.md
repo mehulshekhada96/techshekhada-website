@@ -33,6 +33,10 @@ npm run build
 npm start
 ```
 
+## Branding & site details
+
+See **[BRANDING.md](./BRANDING.md)** for site URLs (main site, OMS portal), logo SVGs, favicon, OMS brand colors, and copy for linking to the OMS portal from techshekhada.com.
+
 ## Customization
 
 - **Product links**: Edit `lib/products.js` to set the live URL for InstaGenius AI (`href`) and add more products.
@@ -58,4 +62,4 @@ git push -u origin main
 
 ## Deploy
 
-Deploy to Vercel, Netlify, or any Node host. Set the root directory to `techshekhada-website` and build command to `npm run build`. Add `RESEND_API_KEY` and `CONTACT_EMAIL_TO` in the host's environment variables.
+Deploy to Vercel, Netlify, or any Node host. Set the root directory to `techshekhada-website` and build command to `npm run build`. Add `RESEND_API_KEY` and `CONTACT_EMAIL_TO` in the host's environment variables...

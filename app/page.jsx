@@ -1,6 +1,19 @@
 import Link from 'next/link';
 import Image from 'next/image';
 import { products } from '@/lib/products';
+import { SITE, absoluteUrl } from '@/lib/site';
+
+export const metadata = {
+  title: 'Home',
+  description: SITE.description,
+  openGraph: {
+    title: `Tech Shekhada — ${SITE.tagline}`,
+    description: SITE.description,
+    url: SITE.baseUrl,
+    images: [{ url: absoluteUrl(SITE.ogImagePath), width: 1200, height: 630, alt: SITE.name }],
+  },
+  alternates: { canonical: SITE.baseUrl },
+};
 
 export default function HomePage() {
   const flagship = products[0];
