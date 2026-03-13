@@ -2,22 +2,29 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { products } from '@/lib/products';
 import { SITE, absoluteUrl } from '@/lib/site';
+import { BreadcrumbJsonLd } from '@/components/JsonLd';
+
+const productsUrl = `${SITE.baseUrl}/products`;
 
 export const metadata = {
   title: 'Our Products',
-  description: 'Software and tools built by Tech Shekhada to help you grow and operate smarter. InstaGenius AI and more.',
+  description:
+    'Software and tools by Tech Shekhada: InstaGenius AI for Instagram growth, SellerOS for Meesho Snapdeal Amazon PDF sorting and SKU extraction. Built for creators and Indian sellers.',
   openGraph: {
     title: 'Products | Tech Shekhada',
-    description: 'Software and tools built by Tech Shekhada. InstaGenius AI and more.',
-    url: `${SITE.baseUrl}/products`,
+    description:
+      'InstaGenius AI and SellerOS. AI-powered Instagram tools and Smart PDF Sort for Meesho, Snapdeal, Amazon. Tech Shekhada.',
+    url: productsUrl,
     images: [{ url: absoluteUrl(SITE.ogImagePath), width: 1200, height: 630, alt: SITE.name }],
   },
-  alternates: { canonical: `${SITE.baseUrl}/products` },
+  alternates: { canonical: productsUrl },
+  robots: { index: true, follow: true },
 };
 
 export default function ProductsPage() {
   return (
     <div className="relative">
+      <BreadcrumbJsonLd items={[{ name: 'Home', url: SITE.baseUrl }, { name: 'Products', url: productsUrl }]} />
       <section className="border-b border-[var(--border)] bg-grid py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h1 className="font-display text-3xl font-bold text-white sm:text-4xl md:text-5xl">

@@ -3,22 +3,26 @@ import Image from 'next/image';
 import { notFound } from 'next/navigation';
 import { products } from '@/lib/products';
 import { SITE, absoluteUrl } from '@/lib/site';
+import { BreadcrumbJsonLd } from '@/components/JsonLd';
 
 export async function generateMetadata({ params }) {
   const { id } = await params;
   const product = products.find((p) => p.id === id);
   if (!product) return { title: 'Product Not Found' };
   const url = `${SITE.baseUrl}/products/${id}`;
+  const imageUrl = product.fullLogoPath ? absoluteUrl(product.fullLogoPath) : product.logoPath ? absoluteUrl(product.logoPath) : absoluteUrl(SITE.ogImagePath);
   return {
     title: product.name,
-    description: product.tagline,
+    description: product.description,
     openGraph: {
       title: `${product.name} | Tech Shekhada`,
       description: product.description,
       url,
-      images: [{ url: absoluteUrl(SITE.ogImagePath), width: 1200, height: 630, alt: product.name }],
+      type: 'website',
+      images: [{ url: imageUrl, width: 1200, height: 630, alt: `${product.name} – ${product.tagline}` }],
     },
     alternates: { canonical: url },
+    robots: { index: true, follow: true },
   };
 }
 
@@ -29,6 +33,7 @@ export default async function ProductDetailPage({ params }) {
   if (!product) notFound();
 
   const productUrl = `${SITE.baseUrl}/products/${product.id}`;
+  const productImage = product.logoPath ? absoluteUrl(product.fullLogoPath ?? product.logoPath) : absoluteUrl(SITE.ogImagePath);
   const productJsonLd = {
     '@context': 'https://schema.org',
     '@type': 'SoftwareApplication',
@@ -36,12 +41,22 @@ export default async function ProductDetailPage({ params }) {
     description: product.description,
     url: productUrl,
     applicationCategory: 'BusinessApplication',
+    operatingSystem: 'Web',
     offers: { '@type': 'Offer', url: product.href },
     featureList: product.features,
+    screenshot: productImage,
+    image: productImage,
   };
+
+  const breadcrumbItems = [
+    { name: 'Home', url: SITE.baseUrl },
+    { name: 'Products', url: `${SITE.baseUrl}/products` },
+    { name: product.name, url: productUrl },
+  ];
 
   return (
     <div className="relative">
+      <BreadcrumbJsonLd items={breadcrumbItems} />
       <script
         type="application/ld+json"
         dangerouslySetInnerHTML={{ __html: JSON.stringify(productJsonLd) }}

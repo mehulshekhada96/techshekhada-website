@@ -2,7 +2,8 @@ import { SITE, absoluteUrl } from '@/lib/site';
 
 export const metadata = {
   title: 'About Us',
-  description: 'Tech Shekhada is a technology company focused on building products and solutions that help businesses and creators grow. Thinking Tech Solutions? Think Tech Shekhada.',
+  description:
+    'Tech Shekhada builds products and solutions that scale. InstaGenius AI for Instagram growth, SellerOS for Meesho Snapdeal Amazon PDF sorting. Clarity, quality, delivery.',
   openGraph: {
     title: 'About Tech Shekhada',
     description: 'We build tech solutions that scale—with clarity, quality, and delivery you can count on.',
@@ -10,6 +11,7 @@ export const metadata = {
     images: [{ url: absoluteUrl(SITE.ogImagePath), width: 1200, height: 630, alt: SITE.name }],
   },
   alternates: { canonical: `${SITE.baseUrl}/about` },
+  robots: { index: true, follow: true },
 };
 
 export default function AboutPage() {

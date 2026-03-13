@@ -10,9 +10,11 @@ export const metadata = {
     title: `Tech Shekhada — ${SITE.tagline}`,
     description: SITE.description,
     url: SITE.baseUrl,
-    images: [{ url: absoluteUrl(SITE.ogImagePath), width: 1200, height: 630, alt: SITE.name }],
+    type: 'website',
+    images: [{ url: absoluteUrl(SITE.ogImagePath), width: 1200, height: 630, alt: `${SITE.name} – ${SITE.tagline}` }],
   },
   alternates: { canonical: SITE.baseUrl },
+  robots: { index: true, follow: true },
 };
 
 export default function HomePage() {

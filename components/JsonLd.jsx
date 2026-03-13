@@ -26,6 +26,7 @@ export function WebSiteJsonLd() {
     name: SITE.name,
     url: SITE.baseUrl,
     description: SITE.description,
+    inLanguage: SITE.locale ?? 'en-IN',
     publisher: {
       '@type': 'Organization',
       name: SITE.name,
@@ -39,6 +40,30 @@ export function WebSiteJsonLd() {
       target: { '@type': 'EntryPoint', urlTemplate: `${SITE.baseUrl}/products?q={search_term_string}` },
       'query-input': 'required name=search_term_string',
     },
+  };
+  return (
+    <script
+      type="application/ld+json"
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+    />
+  );
+}
+
+/**
+ * BreadcrumbList for inner pages. Pass items as [{ name, url }].
+ * @param {{ items: { name: string; url: string }[] }} props
+ */
+export function BreadcrumbJsonLd({ items }) {
+  if (!items?.length) return null;
+  const jsonLd = {
+    '@context': 'https://schema.org',
+    '@type': 'BreadcrumbList',
+    itemListElement: items.map((item, i) => ({
+      '@type': 'ListItem',
+      position: i + 1,
+      name: item.name,
+      item: item.url,
+    })),
   };
   return (
     <script

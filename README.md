@@ -35,7 +35,7 @@ npm start
 
 ## Branding & site details
 
-See **[BRANDING.md](./BRANDING.md)** for site URLs (main site, OMS portal), logo SVGs, favicon, OMS brand colors, and copy for linking to the OMS portal from techshekhada.com.
+See **[BRANDING.md](./BRANDING.md)** for site URLs (main site, SellerOS app), logo SVGs, favicon, brand colors, and copy for linking to SellerOS from techshekhada.com.
 
 ## Customization
 
@@ -59,6 +59,23 @@ git remote add origin https://github.com/YOUR_USERNAME/REPO_NAME.git
 git branch -M main
 git push -u origin main
 ```
+
+## SEO & discoverability
+
+The site is set up to be crawlable and indexable by search engines:
+
+- **Metadata**: Every page has unique `title`, `description`, Open Graph and Twitter Card tags, and canonical URLs.
+- **Sitemap**: `https://techshekhada.com/sitemap.xml` is generated from `app/sitemap.js` and linked in `app/robots.js`.
+- **Robots**: `https://techshekhada.com/robots.txt` allows all crawlers and points to the sitemap; `/api/` is disallowed.
+- **Structured data**: Organization and WebSite JSON-LD in the root layout; BreadcrumbList on products and product detail pages; SoftwareApplication schema on each product page.
+- **Manifest**: `app/manifest.js` provides a web app manifest for PWA/discoverability.
+
+To get indexed by Google:
+
+1. Deploy the site and set `NEXT_PUBLIC_SITE_URL` to your production URL (e.g. `https://techshekhada.com`).
+2. In [Google Search Console](https://search.google.com/search-console), add the property (domain or URL prefix) and verify ownership (HTML tag, DNS, or file).
+3. Submit the sitemap: **Sitemaps** → Add new sitemap → `https://techshekhada.com/sitemap.xml`.
+4. Optionally use **URL Inspection** to request indexing for the homepage and key pages.
 
 ## Deploy
 
