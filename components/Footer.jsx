@@ -24,8 +24,15 @@ export default function Footer() {
               />
             </Link>
             <p className="mt-2 max-w-sm text-sm text-slate-400">
-              Thinking Tech Solutions? Think Tech Shekhada.
+              Premium AI Products for Modern Growth.
             </p>
+            <div className="mt-4 text-sm text-slate-500">
+              <a href="mailto:support@techshekhada.com" className="hover:text-sky-400 transition-colors">
+                support@techshekhada.com
+              </a>
+            </div>
+
+
           </div>
           <nav className="flex flex-wrap gap-6">
             {links.map(({ href, label }) => (

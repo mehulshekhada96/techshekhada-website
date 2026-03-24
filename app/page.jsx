@@ -42,15 +42,16 @@ export default function HomePage() {
           </div>
 
           <h1 className="font-display text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl animate-fade-in text-balance leading-[1.1]">
-            Thinking Tech Solutions?
+            Premium Tools for
             <br />
-            <span className="gradient-text">Think Tech Shekhada.</span>
+            <span className="gradient-text">Modern Growth.</span>
           </h1>
           
           <p className="mt-8 text-lg text-slate-400 sm:text-xl max-w-2xl mx-auto animate-slide-up text-balance leading-relaxed">
-            We build products and solutions that scale—from AI-powered growth tools to custom enterprise software.
-            Precision in execution, clarity in results.
+            We build industrial-grade products that scale. From AI-powered Instagram automation to high-precision e-commerce tools.
+            Precision in code, clarity in results.
           </p>
+
 
           <div className="mt-12 flex flex-wrap items-center justify-center gap-5 animate-slide-up">
             <Link
@@ -172,12 +173,13 @@ export default function HomePage() {
             <div className="absolute bottom-0 left-0 w-64 h-64 bg-indigo-500/10 rounded-full blur-[80px] -ml-32 -mb-32" />
             
             <h2 className="relative font-display text-4xl font-bold text-white sm:text-5xl lg:text-6xl text-balance">
-              Built to last. <span className="text-sky-400">Shipped on time.</span>
+              Industrial-Grade. <span className="text-sky-400">Shipped Daily.</span>
             </h2>
             <p className="relative mt-8 max-w-2xl mx-auto text-slate-400 text-lg leading-relaxed">
-              We focus on clarity, performance, and industrial-grade maintainability. 
-              Whether it's a proprietary product or a bespoke solution, we deliver with uncompromising standards.
+              We focus on clarity, performance, and long-term maintainability. 
+              Our studio builds tools that solve real problems with uncompromising engineering standards.
             </p>
+
             <div className="relative mt-12">
               <Link
                 href="/about"

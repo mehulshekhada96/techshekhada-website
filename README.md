@@ -1,6 +1,7 @@
 # Tech Shekhada — Official Website
 
-**techshekhada.com** — *Thinking Tech Solutions? Think Tech Shekhada.*
+**techshekhada.com** — *Premium AI Products for Modern Growth.*
+
 
 This is the official company website for Tech Shekhada. It includes:
 

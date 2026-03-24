@@ -20,10 +20,10 @@ export default function AboutPage() {
       <section className="border-b border-[var(--border)] bg-grid py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
           <h1 className="font-display text-3xl font-bold text-white sm:text-4xl md:text-5xl">
-            About Tech Shekhada
+            A Product Studio for the AI Era
           </h1>
           <p className="mt-4 max-w-2xl text-slate-400 text-lg">
-            We build tech solutions that scale—with clarity, quality, and delivery you can count on.
+            We build industrial-grade software that helps creators and businesses scale.
           </p>
         </div>
       </section>
@@ -36,41 +36,41 @@ export default function AboutPage() {
                 Who we are
               </h2>
               <p className="mt-4 text-slate-400 leading-relaxed">
-                Tech Shekhada is a technology company focused on building products and solutions
-                that help businesses and creators grow. From AI-powered tools like InstaGenius AI
-                to custom software and integrations, we combine clear architecture
-                and a focus on user experience to deliver results.
+                Tech Shekhada is a product-first technology studio. We focus on creating 
+                high-performance tools like InstaGenius AI and SellerOS that solve complex 
+                workflow problems for modern users. Our passion lies in the intersection 
+                of clean architecture and superior user experience.
               </p>
               <p className="mt-4 text-slate-400 leading-relaxed">
-                Our tagline says it all: <strong className="text-slate-300">Thinking Tech Solutions? Think Tech Shekhada.</strong>
-                Whether you need a SaaS product, an API, or a full platform, we approach every project
-                with the same standards—reliability, performance, and maintainability.
+                Our philosophy is simple: <strong className="text-slate-300">Build products that we would use ourselves.</strong>
+                Every tool we ship is built with a focus on reliability, performance, and industrial-grade standards.
               </p>
             </div>
             <div>
               <h2 className="font-display text-xl font-bold text-white">
-                What we do
+                Our Focus
               </h2>
               <ul className="mt-4 space-y-3 text-slate-400">
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 h-2 w-2 rounded-full bg-sky-500 flex-shrink-0" />
-                  <span><strong className="text-slate-300">Product development</strong> — We ship products from idea to launch, with clear roadmaps and scalable architecture.</span>
+                  <span><strong className="text-slate-300">Product Studio</strong> — We own the entire lifecycle of our products, from initial concept to industrial scaling.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 h-2 w-2 rounded-full bg-sky-500 flex-shrink-0" />
-                  <span><strong className="text-slate-300">AI & automation</strong> — We integrate cutting-edge AI for content, analytics, and workflow automation.</span>
+                  <span><strong className="text-slate-300">AI Innovation</strong> — We leverage Google Gemini AI to build next-generation automation that feels like magic.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 h-2 w-2 rounded-full bg-sky-500 flex-shrink-0" />
-                  <span><strong className="text-slate-300">Integrations</strong> — We connect your favorite tools and platforms so everything works together.</span>
+                  <span><strong className="text-slate-300">Efficiency Tools</strong> — We build the internal engines that power e-commerce and marketing workflows.</span>
                 </li>
                 <li className="flex items-start gap-3">
                   <span className="mt-1.5 h-2 w-2 rounded-full bg-sky-500 flex-shrink-0" />
-                  <span><strong className="text-slate-300">Support & iteration</strong> — We don't stop at launch. We monitor, improve, and extend based on real usage.</span>
+                  <span><strong className="text-slate-300">Industrial Quality</strong> — We ship polished, production-ready software that stays reliable at scale.</span>
                 </li>
               </ul>
             </div>
           </div>
+
 
           <div className="mt-20 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-8 sm:p-12">
             <h2 className="font-display text-xl font-bold text-white text-center">
