@@ -26,7 +26,8 @@ export const metadata = {
     template: `%s | Tech Shekhada`,
   },
   description: SITE.description,
-  keywords: SITE.keywords?.split?.(', ') ?? ['Tech Shekhada', 'tech solutions', 'software', 'InstaGenius AI', 'SellerOS', 'SaaS', 'custom software'],
+  keywords: SITE.keywords?.split?.(', ') ?? ['Tech Shekhada', 'product studio', 'AI tools', 'InstaGenius AI', 'SellerOS', 'SaaS', 'growth tools'],
+
   authors: [{ name: SITE.name, url: SITE.baseUrl }],
   creator: SITE.name,
   publisher: SITE.name,

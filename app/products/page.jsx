@@ -9,11 +9,11 @@ const productsUrl = `${SITE.baseUrl}/products`;
 export const metadata = {
   title: 'Our Products',
   description:
-    'Software and tools by Tech Shekhada: InstaGenius AI for Instagram growth, SellerOS for Meesho Snapdeal Amazon PDF sorting and SKU extraction. Built for creators and Indian sellers.',
+    'Industrial-grade products by Tech Shekhada. Featuring InstaGenius AI for Instagram growth and SellerOS for e-commerce efficiency. Built for creators and modern businesses.',
   openGraph: {
     title: 'Products | Tech Shekhada',
     description:
-      'InstaGenius AI and SellerOS. AI-powered Instagram tools and Smart PDF Sort for Meesho, Snapdeal, Amazon. Tech Shekhada.',
+      'Premium AI tools and e-commerce efficiency engines. Explore InstaGenius AI and SellerOS by Tech Shekhada.',
     url: productsUrl,
     images: [{ url: absoluteUrl(SITE.ogImagePath), width: 1200, height: 630, alt: SITE.name }],
   },
@@ -31,8 +31,9 @@ export default function ProductsPage() {
             Our products
           </h1>
           <p className="mt-4 max-w-2xl text-slate-400">
-            Software and tools built by Tech Shekhada to help you grow and operate smarter.
+            Industrial-grade tools meticulously crafted by Tech Shekhada to help you grow and operate with precision.
           </p>
+
         </div>
       </section>
 
