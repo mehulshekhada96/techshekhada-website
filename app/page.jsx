@@ -54,17 +54,19 @@ export default function HomePage() {
 
 
           <div className="mt-12 flex flex-wrap items-center justify-center gap-5 animate-slide-up">
-            <Link
-              href="/products"
+            <a
+              href="https://ig.techshekhada.com/"
+              target="_blank"
+              rel="noopener noreferrer"
               className="group relative inline-flex items-center overflow-hidden rounded-xl bg-sky-500 px-8 py-4 text-sm font-semibold text-white shadow-2xl transition hover:bg-sky-600 focus:outline-none"
             >
               <span className="relative z-10 flex items-center gap-2">
-                Explore Products
+                Launch InstaGenius
                 <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
               </span>
-            </Link>
+            </a>
             <Link
               href="/contact"
               className="glass inline-flex items-center rounded-xl px-8 py-4 text-sm font-semibold text-slate-200 transition hover:bg-white/10 focus:outline-none"

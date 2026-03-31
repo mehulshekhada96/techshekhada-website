@@ -102,6 +102,39 @@ export default function ProductsPage() {
           </div>
         </div>
       </section>
+
+      {/* Global Infrastructure Section */}
+      <section className="border-t border-[var(--border)] bg-slate-950/40 py-24 sm:py-32">
+        <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="rounded-[3rem] border border-sky-500/20 bg-sky-500/5 p-12 sm:p-20 text-center relative overflow-hidden">
+            <div className="absolute top-0 left-0 w-64 h-64 bg-sky-500/10 rounded-full blur-[100px] -ml-32 -mt-32" />
+            <div className="relative">
+              <h2 className="font-display text-3xl font-bold text-white sm:text-4xl">
+                Globally Available. Industrial Scale.
+              </h2>
+              <p className="mt-6 mx-auto max-w-2xl text-slate-400 text-lg leading-relaxed">
+                Tech Shekhada products are powered by world-class cloud infrastructure. 
+                Our digital-native architecture ensures high availability, data security, 
+                and rapid performance for users across the globe.
+              </p>
+              <div className="mt-12 grid gap-8 sm:grid-cols-3">
+                <div>
+                  <div className="text-3xl font-bold text-white">99.9%</div>
+                  <div className="mt-1 text-sm font-medium text-sky-400 uppercase tracking-widest">Uptime</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-white">Global</div>
+                  <div className="mt-1 text-sm font-medium text-sky-400 uppercase tracking-widest">CDN Reach</div>
+                </div>
+                <div>
+                  <div className="text-3xl font-bold text-white">AES-256</div>
+                  <div className="mt-1 text-sm font-medium text-sky-400 uppercase tracking-widest">Data Security</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 }
