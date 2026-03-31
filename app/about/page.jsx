@@ -1,4 +1,5 @@
 import { SITE, absoluteUrl } from '@/lib/site';
+import FounderProfile from '@/components/FounderProfile';
 
 export const metadata = {
   title: 'About Us',
@@ -19,57 +20,67 @@ export default function AboutPage() {
     <div className="relative">
       <section className="border-b border-[var(--border)] bg-grid py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <h1 className="font-display text-3xl font-bold text-white sm:text-4xl md:text-5xl">
-            A Product Studio for the AI Era
+          <h1 className="font-display text-4xl font-bold text-white sm:text-5xl md:text-6xl lg:text-7xl">
+            A Product Studio for the <span className="gradient-text">AI Era.</span>
           </h1>
-          <p className="mt-4 max-w-2xl text-slate-400 text-lg">
-            We build industrial-grade software that helps creators and businesses scale.
+          <p className="mt-8 max-w-2xl text-slate-400 text-lg sm:text-xl leading-relaxed">
+            We build and scale industrial-grade AI products. 
+            Tech Shekhada is an independent product studio focused on precision engineering, 
+            algorithmic growth, and cloud-native excellence.
           </p>
         </div>
       </section>
 
       <section className="py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
-          <div className="grid gap-12 lg:grid-cols-2 lg:gap-16">
-            <div>
-              <h2 className="font-display text-xl font-bold text-white">
-                Who we are
-              </h2>
-              <p className="mt-4 text-slate-400 leading-relaxed">
-                Tech Shekhada is a product-first technology studio. We focus on creating 
-                high-performance tools like InstaGenius AI and SellerOS that solve complex 
-                workflow problems for modern users. Our passion lies in the intersection 
-                of clean architecture and superior user experience.
-              </p>
-              <p className="mt-4 text-slate-400 leading-relaxed">
-                Our philosophy is simple: <strong className="text-slate-300">Build products that we would use ourselves.</strong>
-                Every tool we ship is built with a focus on reliability, performance, and industrial-grade standards.
-              </p>
+            <div className="space-y-12">
+              <div>
+                <h2 className="font-display text-2xl font-bold text-white">
+                  Who we are
+                </h2>
+                <p className="mt-4 text-slate-400 leading-relaxed text-lg">
+                  Tech Shekhada is an independent product studio. We don't just write code; 
+                  we build, own, and scale high-performance tools like <strong className="text-white">InstaGenius AI</strong> and <strong className="text-white">SellerOS</strong>. 
+                  Our focus is on creating industrial-grade products that solve complex 
+                  workflow problems for modern users globally.
+                </p>
+              </div>
+
+              <FounderProfile />
             </div>
-            <div>
-              <h2 className="font-display text-xl font-bold text-white">
-                Our Focus
-              </h2>
-              <ul className="mt-4 space-y-3 text-slate-400">
-                <li className="flex items-start gap-3">
-                  <span className="mt-1.5 h-2 w-2 rounded-full bg-sky-500 flex-shrink-0" />
-                  <span><strong className="text-slate-300">Product Studio</strong> — We own the entire lifecycle of our products, from initial concept to industrial scaling.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1.5 h-2 w-2 rounded-full bg-sky-500 flex-shrink-0" />
-                  <span><strong className="text-slate-300">AI Innovation</strong> — We leverage Google Gemini AI to build next-generation automation that feels like magic.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1.5 h-2 w-2 rounded-full bg-sky-500 flex-shrink-0" />
-                  <span><strong className="text-slate-300">Efficiency Tools</strong> — We build the internal engines that power e-commerce and marketing workflows.</span>
-                </li>
-                <li className="flex items-start gap-3">
-                  <span className="mt-1.5 h-2 w-2 rounded-full bg-sky-500 flex-shrink-0" />
-                  <span><strong className="text-slate-300">Industrial Quality</strong> — We ship polished, production-ready software that stays reliable at scale.</span>
-                </li>
-              </ul>
+            
+            <div className="space-y-12">
+              <div>
+                <h2 className="font-display text-2xl font-bold text-white pt-10">
+                  Modern Business Model
+                </h2>
+                <p className="mt-4 text-slate-400 leading-relaxed text-lg">
+                  We operate as a <strong className="text-white">digitally-native</strong> enterprise. 
+                  Our model is built on high-efficiency, cloud-first infrastructure that allows us to ship 
+                  updates rapidly and maintain a global reach with minimal overhead.
+                </p>
+                <ul className="mt-6 space-y-4 text-slate-400">
+                  <li className="flex items-start gap-4">
+                    <div className="mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-sky-500/10 text-sky-400">
+                      <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" /></svg>
+                    </div>
+                    <span><strong className="text-slate-200">Scale-First</strong> — Architecture designed to handle millions of requests without manual intervention.</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <div className="mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-sky-500/10 text-sky-400">
+                      <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" /></svg>
+                    </div>
+                    <span><strong className="text-slate-200">AI-Centric</strong> — Leveraging Google Gemini and Vertex AI to deliver state-of-the-art results.</span>
+                  </li>
+                  <li className="flex items-start gap-4">
+                    <div className="mt-1 flex h-6 w-6 items-center justify-center rounded-full bg-sky-500/10 text-sky-400">
+                      <svg className="h-4 w-4" fill="currentColor" viewBox="0 0 20 20"><path d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" /></svg>
+                    </div>
+                    <span><strong className="text-slate-200">Global Service</strong> — Our tools power creators and sellers across multiple continents.</span>
+                  </li>
+                </ul>
+              </div>
             </div>
-          </div>
 
 
           <div className="mt-20 rounded-2xl border border-[var(--border)] bg-[var(--bg-card)] p-8 sm:p-12">

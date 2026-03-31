@@ -31,19 +31,35 @@ export default function Footer() {
                 support@techshekhada.com
               </a>
             </div>
+            <div className="mt-6 flex items-center gap-2 text-xs font-semibold uppercase tracking-widest text-sky-400/80">
+              <span className="h-1.5 w-1.5 rounded-full bg-sky-500 animate-pulse" />
+              Infrastructure powered by Google Cloud Vertex AI & Gemini 3.1 Pro
+            </div>
 
 
           </div>
-          <nav className="flex flex-wrap gap-6">
-            {links.map(({ href, label }) => (
-              <Link
-                key={href}
-                href={href}
-                className="text-sm text-slate-400 transition-colors hover:text-white"
-              >
-                {label}
+          <nav className="flex flex-wrap gap-x-8 gap-y-4">
+            <div className="flex flex-col gap-3">
+              <span className="text-xs font-bold uppercase tracking-widest text-slate-500">Navigation</span>
+              {links.map(({ href, label }) => (
+                <Link
+                  key={href}
+                  href={href}
+                  className="text-sm text-slate-400 transition-colors hover:text-white"
+                >
+                  {label}
+                </Link>
+              ))}
+            </div>
+            <div className="flex flex-col gap-3">
+              <span className="text-xs font-bold uppercase tracking-widest text-slate-500">Legal</span>
+              <Link href="/privacy" className="text-sm text-slate-400 transition-colors hover:text-white">
+                Privacy Policy
               </Link>
-            ))}
+              <Link href="/terms" className="text-sm text-slate-400 transition-colors hover:text-white">
+                Terms of Service
+              </Link>
+            </div>
           </nav>
         </div>
         <div className="mt-8 border-t border-[var(--border)] pt-8 text-center text-sm text-slate-500">
