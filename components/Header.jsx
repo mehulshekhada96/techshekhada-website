@@ -20,15 +20,30 @@ export default function Header() {
   return (
     <header className="sticky top-0 z-50 border-b border-[var(--border)] bg-[var(--bg-primary)]/80 backdrop-blur-xl">
       <div className="mx-auto flex max-w-6xl items-center justify-between px-4 py-4 sm:px-6 lg:px-8">
-        <Link href="/" className="flex items-center gap-2 focus:outline-none">
-          <Image
-            src="/logo.png"
-            alt="Tech Shekhada"
-            width={200}
-            height={200}
-            className="h-10 w-auto sm:h-12"
-            priority
-          />
+        <Link href="/" className="group flex items-center gap-3 focus:outline-none">
+          <div className="relative h-10 w-10 sm:h-11 sm:w-11 flex-shrink-0 overflow-hidden rounded-xl border border-amber-500/20 bg-slate-900/60 p-0.5 shadow-md shadow-amber-500/5 transition group-hover:border-amber-500/40">
+            <Image
+              src="/techshekhada-icon.png"
+              alt="Tech Shekhada Private Limited"
+              width={88}
+              height={88}
+              className="h-full w-full object-contain"
+              priority
+            />
+          </div>
+          <div className="flex flex-col">
+            <div className="flex items-center gap-1.5">
+              <span className="font-display text-base sm:text-lg font-bold tracking-tight text-white transition group-hover:text-amber-300">
+                TECH SHEKHADA
+              </span>
+              <span className="rounded bg-amber-500/10 border border-amber-500/30 px-1.5 py-0.2 text-[9px] font-bold text-amber-400 uppercase tracking-wider">
+                PVT LTD
+              </span>
+            </div>
+            <span className="text-[10px] font-semibold text-sky-400 tracking-wider uppercase">
+              DPIIT Registered Startup
+            </span>
+          </div>
         </Link>
 
         <nav className="hidden items-center gap-8 md:flex">

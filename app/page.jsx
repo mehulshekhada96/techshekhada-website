@@ -7,7 +7,7 @@ export const metadata = {
   title: 'Home',
   description: SITE.description,
   openGraph: {
-    title: `Tech Shekhada — ${SITE.tagline}`,
+    title: `Tech Shekhada Private Limited — ${SITE.tagline}`,
     description: SITE.description,
     url: SITE.baseUrl,
     type: 'website',
@@ -33,12 +33,12 @@ export default function HomePage() {
         <div className="absolute inset-0 bg-gradient-to-b from-sky-500/5 via-transparent to-transparent pointer-events-none" />
         
         <div className="relative mx-auto max-w-5xl text-center">
-          <div className="mb-6 inline-flex animate-fade-in items-center gap-2 rounded-full border border-sky-500/20 bg-sky-500/10 px-4 py-1.5 text-xs font-medium text-sky-400 backdrop-blur-md">
+          <div className="mb-6 inline-flex animate-fade-in items-center gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-4 py-1.5 text-xs font-semibold text-sky-300 backdrop-blur-md shadow-lg shadow-sky-500/10">
             <span className="relative flex h-2 w-2">
               <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-sky-400 opacity-75"></span>
               <span className="relative inline-flex h-2 w-2 rounded-full bg-sky-500"></span>
             </span>
-            Scaling the future of tech
+            DPIIT Registered Startup • Government of India Recognized
           </div>
 
           <h1 className="font-display text-5xl font-bold tracking-tight text-white sm:text-6xl md:text-7xl lg:text-8xl animate-fade-in text-balance leading-[1.1]">
@@ -48,8 +48,7 @@ export default function HomePage() {
           </h1>
           
           <p className="mt-8 text-lg text-slate-400 sm:text-xl max-w-2xl mx-auto animate-slide-up text-balance leading-relaxed">
-            We build industrial-grade products that scale. From AI-powered Instagram automation to high-precision e-commerce tools.
-            Precision in code, clarity in results.
+            Tech Shekhada Private Limited builds industrial-grade products that scale. From trademarked AI automation with <strong className="text-white">InstaGenius™</strong> to high-volume e-commerce fulfillment and event platforms.
           </p>
 
 
@@ -61,7 +60,20 @@ export default function HomePage() {
               className="group relative inline-flex items-center overflow-hidden rounded-xl bg-sky-500 px-8 py-4 text-sm font-semibold text-white shadow-2xl transition hover:bg-sky-600 focus:outline-none"
             >
               <span className="relative z-10 flex items-center gap-2">
-                Launch InstaGenius
+                Launch InstaGenius™
+                <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
+                </svg>
+              </span>
+            </a>
+            <a
+              href="https://eventgenius.techshekhada.com"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="group relative inline-flex items-center overflow-hidden rounded-xl border border-sky-500/40 bg-sky-500/10 px-8 py-4 text-sm font-semibold text-sky-300 shadow-xl backdrop-blur transition hover:bg-sky-500/20 hover:text-white focus:outline-none"
+            >
+              <span className="relative z-10 flex items-center gap-2">
+                Try EventGenius
                 <svg className="h-4 w-4 transition-transform group-hover:translate-x-1" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14 5l7 7m0 0l-7 7m7-7H3" />
                 </svg>
@@ -122,7 +134,7 @@ export default function HomePage() {
                     ))}
                   </div>
 
-                  <div className="pt-6">
+                  <div className="pt-6 flex flex-col sm:flex-row sm:items-center gap-4">
                     <a
                       href={flagship.href}
                       target="_blank"
@@ -134,6 +146,9 @@ export default function HomePage() {
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                       </svg>
                     </a>
+                    <span className="text-xs text-slate-500">
+                      Registered Trademark of Tech Shekhada Private Limited
+                    </span>
                   </div>
                 </div>
                 
@@ -143,7 +158,7 @@ export default function HomePage() {
                     <div className="relative glass aspect-square w-full rounded-[2rem] flex items-center justify-center p-12 overflow-hidden group-hover:scale-105 transition-transform duration-700">
                       <Image
                         src="/instagenius-logo.svg"
-                        alt="InstaGenius AI"
+                        alt="InstaGenius™"
                         width={280}
                         height={280}
                         className="relative z-10 h-full w-full object-contain drop-shadow-2xl"

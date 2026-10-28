@@ -32,8 +32,11 @@ export default function PricingHubPage() {
                 </svg>
               </div>
               <div className="text-center">
-                <h3 className="text-xl font-bold text-white">InstaGenius AI</h3>
+                <h3 className="text-xl font-bold text-white">InstaGenius™</h3>
                 <p className="mt-2 text-sm text-slate-400">Content Automation & Growth</p>
+                <span className="mt-1 inline-block text-[10px] text-sky-400 font-semibold uppercase tracking-wider">
+                  Registered Trademark
+                </span>
               </div>
               <span className="mt-4 text-xs font-bold uppercase tracking-widest text-sky-400 group-hover:text-sky-300">
                 View Pricing →

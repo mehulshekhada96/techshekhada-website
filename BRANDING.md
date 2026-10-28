@@ -8,10 +8,19 @@ Use this for **techshekhada.com**. The app (Smart PDF Sort / SKU tools) lives at
 
 | Item | Value |
 |------|--------|
+| **Entity Name** | Tech Shekhada Private Limited |
+| **Startup Status** | DPIIT Registered Startup (Govt. of India) |
+| **CIN** | U62099GJ2026PTC180614 |
+| **Corporate Office** | 438, Prime Arcade, Lajamni chowk, Mota Varachha, Surat, Gujarat 394101 |
+| **Phone** | +91 99781 05288 |
+| **Email** | support@techshekhada.com |
+| **Instagram** | https://www.instagram.com/tech_shekhada/ |
 | **Main site** | https://techshekhada.com |
+| **Flagship Product** | InstaGenius™ (Registered Trademark) |
+| **Flagship URL** | https://ig.techshekhada.com |
+| **InstaGenius IG** | https://www.instagram.com/instagenius__ai/ |
+| **Seller Utility** | SellerOS |
 | **App URL** | https://selleros.techshekhada.com |
-| **Brand name** | Tech Shekhada |
-| **Product name** | SellerOS |
 
 ---
 

@@ -15,7 +15,7 @@ export async function generateMetadata({ params }) {
     title: product.name,
     description: product.description,
     openGraph: {
-      title: `${product.name} | Tech Shekhada`,
+      title: `${product.name} | Tech Shekhada Private Limited`,
       description: product.description,
       url,
       type: 'website',
