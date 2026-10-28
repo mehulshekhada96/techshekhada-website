@@ -9,11 +9,11 @@ const productsUrl = `${SITE.baseUrl}/products`;
 export const metadata = {
   title: 'Our Products',
   description:
-    'Industrial-grade products by Tech Shekhada. Featuring InstaGenius AI for Instagram growth and SellerOS for e-commerce efficiency. Built for creators and modern businesses.',
+    'Industrial-grade products by Tech Shekhada Private Limited. Featuring InstaGenius™ for Instagram growth, SellerOS for e-commerce efficiency, and EventGenius for event booking & ticketing. Built for creators and modern businesses.',
   openGraph: {
-    title: 'Products | Tech Shekhada',
+    title: 'Products | Tech Shekhada Private Limited',
     description:
-      'Premium AI tools and e-commerce efficiency engines. Explore InstaGenius AI and SellerOS by Tech Shekhada.',
+      'Premium tools for modern growth. Explore InstaGenius™, SellerOS, and EventGenius by Tech Shekhada Private Limited.',
     url: productsUrl,
     images: [{ url: absoluteUrl(SITE.ogImagePath), width: 1200, height: 630, alt: SITE.name }],
   },
@@ -27,11 +27,15 @@ export default function ProductsPage() {
       <BreadcrumbJsonLd items={[{ name: 'Home', url: SITE.baseUrl }, { name: 'Products', url: productsUrl }]} />
       <section className="border-b border-[var(--border)] bg-grid py-16 sm:py-20">
         <div className="mx-auto max-w-6xl px-4 sm:px-6 lg:px-8">
+          <div className="inline-flex items-center gap-2 rounded-full border border-sky-500/30 bg-sky-500/10 px-3.5 py-1 text-xs font-semibold text-sky-400 mb-4">
+            <span className="h-1.5 w-1.5 rounded-full bg-sky-400 animate-pulse" />
+            DPIIT Registered Startup Portfolio
+          </div>
           <h1 className="font-display text-3xl font-bold text-white sm:text-4xl md:text-5xl">
             Our products
           </h1>
           <p className="mt-4 max-w-2xl text-slate-400">
-            Industrial-grade tools meticulously crafted by Tech Shekhada to help you grow and operate with precision.
+            Industrial-grade tools meticulously crafted by Tech Shekhada Private Limited to help you scale and operate with precision.
           </p>
 
         </div>

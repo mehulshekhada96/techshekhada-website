@@ -5,11 +5,26 @@ export function OrganizationJsonLd() {
     '@context': 'https://schema.org',
     '@type': 'Organization',
     name: SITE.name,
+    legalName: SITE.legalName,
     url: SITE.baseUrl,
     description: SITE.description,
     slogan: SITE.tagline,
     logo: absoluteUrl(SITE.ogImagePath),
-    sameAs: [],
+    telephone: SITE.phone,
+    email: SITE.email,
+    identifier: SITE.cin,
+    address: {
+      '@type': 'PostalAddress',
+      streetAddress: '438, Prime Arcade, Lajamni chowk, Mota Varachha',
+      addressLocality: 'Surat',
+      addressRegion: 'Gujarat',
+      postalCode: '394101',
+      addressCountry: 'IN',
+    },
+    sameAs: [
+      SITE.instagram,
+      SITE.instaGeniusInstagram,
+    ],
   };
   return (
     <script

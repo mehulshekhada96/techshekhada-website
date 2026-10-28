@@ -22,11 +22,11 @@ const ogImage = absoluteUrl(SITE.ogImagePath);
 export const metadata = {
   metadataBase: new URL(SITE.baseUrl),
   title: {
-    default: `Tech Shekhada | ${SITE.tagline}`,
-    template: `%s | Tech Shekhada`,
+    default: `Tech Shekhada Private Limited | ${SITE.tagline}`,
+    template: `%s | Tech Shekhada Private Limited`,
   },
   description: SITE.description,
-  keywords: SITE.keywords?.split?.(', ') ?? ['Tech Shekhada', 'product studio', 'AI tools', 'InstaGenius AI', 'SellerOS', 'SaaS', 'growth tools'],
+  keywords: SITE.keywords?.split?.(', ') ?? ['Tech Shekhada Private Limited', 'DPIIT Registered Startup', 'AI tools', 'InstaGenius™', 'SellerOS', 'SaaS', 'growth tools'],
 
   authors: [{ name: SITE.name, url: SITE.baseUrl }],
   creator: SITE.name,
@@ -37,7 +37,7 @@ export const metadata = {
     locale: SITE.locale ?? 'en_IN',
     url: SITE.baseUrl,
     siteName: SITE.name,
-    title: `Tech Shekhada — ${SITE.tagline}`,
+    title: `Tech Shekhada Private Limited — ${SITE.tagline}`,
     description: SITE.description,
     images: [
       {
@@ -52,7 +52,7 @@ export const metadata = {
     card: 'summary_large_image',
     site: SITE.twitterHandle,
     creator: SITE.twitterHandle,
-    title: `Tech Shekhada — ${SITE.tagline}`,
+    title: `Tech Shekhada Private Limited — ${SITE.tagline}`,
     description: SITE.description,
     images: [ogImage],
   },

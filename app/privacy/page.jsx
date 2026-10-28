@@ -25,10 +25,10 @@ export default function PrivacyPage() {
             <div>
               <h2 className="text-2xl font-bold text-white">1. Introduction</h2>
               <p className="mt-4 leading-relaxed">
-                Welcome to Tech Shekhada. We respect your privacy and are committed to protecting your personal data. 
-                This privacy policy will inform you about how we look after your personal data when you visit our 
-                website (regardless of where you visit it from) and tell you about your privacy rights and how 
-                the law protects you.
+                Welcome to Tech Shekhada Private Limited (&quot;Tech Shekhada&quot;, &quot;we&quot;, &quot;us&quot;, or &quot;our&quot;). 
+                Tech Shekhada Private Limited is a company incorporated under the Companies Act, India (CIN: U62099GJ2026PTC180614) 
+                and recognized as a startup by the Department for Promotion of Industry and Internal Trade (DPIIT), Government of India.
+                We respect your privacy and are committed to protecting your personal data across all our platforms, including the trademarked <strong className="text-white">InstaGenius™</strong> and <strong className="text-white">SellerOS</strong> platforms.
               </p>
             </div>
 
@@ -72,9 +72,15 @@ export default function PrivacyPage() {
               <h2 className="text-2xl font-bold text-white">5. Contact Us</h2>
               <p className="mt-4 leading-relaxed">
                 If you have any questions about this privacy policy or our privacy practices, please contact us at:
-                <br />
-                <a href="mailto:support@techshekhada.com" className="text-sky-400 hover:underline">support@techshekhada.com</a>
               </p>
+              <div className="mt-3 text-slate-300 space-y-1">
+                <p className="font-semibold text-white">Tech Shekhada Private Limited</p>
+                <p>CIN: {SITE.cin}</p>
+                <p>Corporate Office: {SITE.officeAddress}</p>
+                <p>Registered Office: {SITE.registeredAddress}</p>
+                <p>Phone: {SITE.phone}</p>
+                <p>Email: <a href="mailto:support@techshekhada.com" className="text-sky-400 hover:underline">support@techshekhada.com</a></p>
+              </div>
             </div>
           </div>
         </div>

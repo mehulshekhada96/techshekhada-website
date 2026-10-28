@@ -29,12 +29,12 @@ export default function FounderProfile() {
         </div>
         <div>
           <h3 className="text-xl font-bold text-white">Mehul Shekhada</h3>
-          <p className="text-sky-400 font-medium">Founder & Lead Engineer</p>
+          <p className="text-sky-400 font-medium">Founder & Director</p>
           <p className="mt-2 text-slate-400 leading-relaxed">
-            With a deep background in full-stack engineering and a passion for automation, 
-            Mehul founded Tech Shekhada to build the next generation of AI-powered tools. 
-            As a product founder, he personally architected and developed the entire product suite, 
-            ensuring every line of code meets industrial standards for reliability and scale.
+            With a deep background in full-stack engineering and scalable systems, 
+            Mehul founded <strong className="text-white">Tech Shekhada Private Limited</strong> to build the next generation of AI-powered automation products. 
+            As Director & Lead Architect, he personally designed and engineered the product architecture, 
+            ensuring every platform meets enterprise standards for reliability and scale.
           </p>
         </div>
       </div>
